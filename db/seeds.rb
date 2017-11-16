@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Movie.destroy_all
+
+# 10.times do
+#   Movie.create([{ title: Faker::DrWho.quote,
+#                 description: Faker::Hipster.paragraph,
+#                 director: Faker::Name.name}])
+# end
+
+#
+# Movie.create([{title: 'Star Wars',
+#               description: 'Lorem Ipsum',
+#               director: 'George Lucas'}])
+
+
+# p "Created #{Movie.count} movies"
