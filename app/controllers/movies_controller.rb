@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.all.order('created_at DESC')
   end
 
   def new
@@ -9,6 +9,12 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.create(movie_params)
+
+    if @movie.save
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private

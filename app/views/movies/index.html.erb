@@ -1,4 +1,7 @@
-<h3>home</h3>
-<div class="movies">
+<h3>Movies</h3>
 
-</div>
+<% @movies.each do |movie| %>
+  <h4><%= movie.title %></h4>
+  <p><%= movie.description %></p>
+  <small><%= movie.director %></small>
+<% end %>
