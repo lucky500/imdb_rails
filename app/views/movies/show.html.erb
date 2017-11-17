@@ -1,3 +1,8 @@
 <h3><%= @movie.title %></h3>
 <p><%= @movie.description %></p>
 <p><%= @movie.director %></p>
+
+<div><%= link_to 'Home', root_path, class: 'btn btn-info' %></div>
+<div><%= link_to 'Edit', edit_movie_path, class: 'btn btn-default' %></div>
+<div><%= link_to 'Delete', movie_path(@movie), class: 'btn btn-danger',
+                  method: :delete, data: { confirm: 'Are you Sure?' } %></div>
