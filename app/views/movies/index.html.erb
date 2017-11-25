@@ -1,7 +1,11 @@
-<h3>Movies</h3>
+<h1 class="current-category"><%= params[:category] %></h1>
 
-<% @movies.each do |movie| %>
-  <h4><%= link_to movie.title, movie_path(movie) %></h4>
+<% if @movies.count == 0 %>
+  <h3>There is no current movies in that category.</h3>
+<% else %>
+  <% @movies.each do |movie| %>
+    <h4><%= link_to movie.title, movie_path(movie) %></h4>
+  <% end %>
 <% end %>
 
 <p><%= link_to 'Add a new Movie', new_movie_path%></p>
