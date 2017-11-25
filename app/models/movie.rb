@@ -1,4 +1,4 @@
-class Movie < ApplicationRecord
+class Movie < ActiveRecord::Base
   belongs_to :user
-  belongs_to :categories
+  belongs_to :category
 end

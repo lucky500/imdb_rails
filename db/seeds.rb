@@ -15,9 +15,9 @@
 # end
 
 #
-Movie.create([{title: 'Star Wars',
-              description: 'Lorem Ipsum',
-              director: 'George Lucas'}])
+# Movie.create([{title: 'Star Wars',
+              # description: 'Lorem Ipsum',
+              # director: 'George Lucas'}])
 
 
 # p "Created #{Movie.count} movies"

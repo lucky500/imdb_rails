@@ -1,8 +1,9 @@
 <h3><%= @movie.title %></h3>
+<h4><%= @movie.category.name %></h4>
 <p><%= @movie.description %></p>
 <p><%= @movie.director %></p>
 
-<div class="btn-group">
+<div class="links btn-group">
   <% if user_signed_in? %>
     <% if @movie.user_id == current_user.id %>
       <%= link_to 'Edit', edit_movie_path, class: 'btn btn-default' %>
