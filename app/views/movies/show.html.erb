@@ -6,8 +6,13 @@
     <div class="movie-info">
       <h3 class="movie-title"><%= @movie.title %></h3>
       <h4 class="movie-category"><%= @movie.category.name %></h4>
-      <p class="movie-desc"><%= @movie.description %></p>
       <p class="movie-director"><span>From: </span><%= @movie.director %></p>
+      <h4 class="average-rating">Average Rating</h4>
+      <div class="average-review-rating" data-score=<%= @average_review %>></div>
+      <span class="number-of-reviews"><em>From: </em>
+        <%= @movie.reviews.count %>
+      </span>
+      <p class="movie-desc"><%= @movie.description %></p>
     </div>
   </div>
 </div>
@@ -39,5 +44,15 @@
       return $(this).attr('data-score');
     },
     path: '/assets/'
+  });
+</script>
+
+<script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function(){
+      return $(this).attr('data-score');
+    }
   });
 </script>
