@@ -11,7 +11,17 @@
     </div>
   </div>
 </div>
-
+<div class="row">
+  <div class="col-md-12">
+    <div class="reviews">
+      <h1>Reviews</h1>
+      <%= render @movie.reviews %>
+      <div>
+        <%= link_to "Add Reviews", new_movie_review_path(@movie), class: "btn-custom" %>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="links btn-group">
   <% if user_signed_in? %>
     <% if @movie.user_id == current_user.id %>
@@ -21,3 +31,13 @@
     <% end %>
   <% end %>
 </div>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function(){
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
