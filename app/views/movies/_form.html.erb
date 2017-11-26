@@ -1,5 +1,6 @@
 <%= form_for @movie do |f| %>
   <div class="form-group">
+    <%= f.file_field :movie_img %>
     <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") %>
     <%= f.text_field :title, required: true, placeholder: "Movie Title", class: "form-control" %>
   </div>

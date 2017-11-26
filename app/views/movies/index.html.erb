@@ -3,9 +3,13 @@
 <% if @movies.count == 0 %>
   <h3>There is no current movies in that category.</h3>
 <% else %>
-  <% @movies.each do |movie| %>
-    <h4><%= link_to movie.title, movie_path(movie) %></h4>
-  <% end %>
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-md-3">
+        <a href="/movies/ <%= movie.id %>">
+          <%= image_tag movie.movie_img.url(:medium), class: "movie" %>
+        </a>
+      </div>
+    <% end %>
+  </div>
 <% end %>
-
-<p><%= link_to 'Add a new Movie', new_movie_path%></p>

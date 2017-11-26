@@ -1,7 +1,16 @@
-<h3><%= @movie.title %></h3>
-<h4><%= @movie.category.name %></h4>
-<p><%= @movie.description %></p>
-<p><%= @movie.director %></p>
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag @movie.movie_img.url(:medium), class: "movie-detail" %>
+  </div>
+  <div class="col-md-8">
+    <div class="movie-info">
+      <h3 class="movie-title"><%= @movie.title %></h3>
+      <h4 class="movie-category"><%= @movie.category.name %></h4>
+      <p class="movie-desc"><%= @movie.description %></p>
+      <p class="movie-director"><span>From: </span><%= @movie.director %></p>
+    </div>
+  </div>
+</div>
 
 <div class="links btn-group">
   <% if user_signed_in? %>
