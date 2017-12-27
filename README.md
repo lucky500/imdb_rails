@@ -6,7 +6,7 @@
 
 ## Description
 
-Simple application mirroring IMDB that allow users to enter their favorite movies and rate movies enterered by other users. The project have 4 models, movie, user, category and review. It uses Devise for authentication and it uses a jQuery plugin called jquery.raty to transform a number into stars rating.
+Simple application mirroring IMDB that allow users to enter their favorite movies and rate movies enterered by other users. The project have 4 models, movie, user, category and review. It uses Devise for authentication, Faker for seeding, and paperclip for images. It uses a jQuery plugin called jquery.raty to transform a number into stars rating.
 
 ## Set-up/Installation Instructions
 
